@@ -139,6 +139,32 @@ src/
 **Response 409:** `{ "error": "Email already registered" }`
 ```
 
+### Example 3: llms.txt Template for AI Discovery
+**Input:** "Create an llms.txt file for our API documentation."
+**Output:**
+```markdown
+# MyAPI — AI-Optimized Documentation
+> llms.txt for AI/LLM discovery. Human docs at https://docs.myapi.dev
+
+## Quick Info
+- Base URL: https://api.myapi.dev/v1
+- Auth: Bearer token (generate at /settings/api-keys)
+- Rate limit: 100 req/min per key
+- Format: JSON request/response
+
+## Core Endpoints
+### POST /auth/login — Authenticate user
+Body: { "email": "str", "password": "str" }
+Response 200: { "token": "jwt_str", "expires_in": 86400 }
+
+### GET /users/:id — Get user profile
+Headers: Authorization: Bearer <token>
+Response 200: { "id": "str", "email": "str", "name": "str", "role": "admin|user" }
+
+## Error Codes
+401: Invalid/missing token | 429: Rate limit exceeded | 500: Internal server error
+```
+
 ---
 
 ## Anti-Patterns

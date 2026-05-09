@@ -102,6 +102,41 @@ When analyzing a legacy file, produce:
 
 ---
 
+## Examples
+
+### Example 1: Dependency Mapping (Full Output)
+**Input:** "Map the dependencies of the auth module before I refactor it."
+**Output:**
+```
+🔍 Dependency Map: src/auth/
+├── Depends On (imports):
+│   ├── src/lib/db.ts (Database client — CRITICAL, used everywhere)
+│   ├── src/lib/jwt.ts (Token utilities — STABLE, rarely changes)
+│   ├── src/lib/hash.ts (Password hashing — LEGACY, uses deprecated bcrypt@2.x)
+│   └── src/types/auth.ts (Auth type definitions)
+├── Depended By (imported by):
+│   ├── src/middleware/auth-guard.ts (Route protection)
+│   ├── src/app/api/login/route.ts (Login endpoint)
+│   └── src/app/api/register/route.ts (Registration endpoint)
+└── Risk Areas:
+    ⚠️  hash.ts uses deprecated bcrypt@2.x → upgrade path: bcrypt@5.x
+    ⚠️  No unit tests for auth module (0% coverage)
+    ⚠️  db.ts imported by 47 files — changes are HIGH BLAST RADIUS
+```
+
+### Example 2: Refactoring Decision Tree
+**Input:** "Should we refactor this 400-line UserService.ts?"
+**Output:**
+| Criterion | Assessment | Score |
+|-----------|------------|-------|
+| Test coverage | 12% (very low) | 🔴 High risk |
+| Coupling | Direct DB calls + email + validation in one file | 🔴 Tight coupling |
+| Change frequency | 3 PRs/week touch this file | 🔴 Active churn |
+| Bug hotspot | 8 bugs in last quarter traced here | 🔴 Defect magnet |
+→ **Decision: Extract, don't rewrite.** Split into UserRepo (DB), UserValidator (validation), EmailService (email). One concern per PR.
+
+---
+
 ## Review Checklist
 - [ ] Golden master tests capture current behavior before refactoring
 - [ ] All dependencies mapped (inputs, outputs, side effects)

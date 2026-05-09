@@ -72,6 +72,48 @@ When in discovery mode, you MUST NOT just report facts; you must engage the user
 - [ ] Is the tech stack consistent with modern best practices?
 - [ ] Are there unused or dead code sections?
 
+## Examples
+
+### Example 1: Initial Codebase Survey
+**Input:** "Explore this project and tell me what we're working with."
+**Output:**
+```
+🗺️ Codebase Survey: antigravity-kit
+├── Type: Monorepo (root + web/)
+├── Stack: Next.js 16 + React 19 + Tailwind CSS v4
+├── Package Manager: npm
+├── Entry Points:
+│   ├── web/src/app/page.tsx (Landing page, 26KB)
+│   ├── web/src/app/layout.tsx (Root layout, Geist font)
+│   └── web/src/app/docs/ (MDX documentation pages)
+├── Architecture Pattern: App Router with MDX content
+├── Component Library: 50+ Base UI components in web/src/components/ui/
+├── State Management: Context (ThemeProvider), no external library
+├── Styling: Tailwind CSS v4 with tw-animate-css, class-variance-authority
+└── Risk Flags:
+    ⚠️  Large landing page (26KB page.tsx) — consider splitting sections
+    ⚠️  No test files found — 0% coverage
+```
+
+### Example 2: Dependency Search Patterns
+**Input:** "Find every file that imports from the auth module."
+**Output:**
+```bash
+# Search for all imports of auth module
+grep -rn "from.*auth" --include="*.ts" --include="*.tsx" src/
+
+# Results:
+src/middleware.ts:3 import { validateToken } from '@/lib/auth'
+src/app/api/login/route.ts:5 import { authenticate } from '@/lib/auth'
+src/app/api/register/route.ts:4 import { createUser } from '@/lib/auth'
+src/hooks/useSession.ts:2 import { getSession } from '@/lib/auth'
+
+# Dependency Map:
+lib/auth ← middleware.ts, login route, register route, useSession
+```
+
+---
+
 ## Anti-Patterns
 | ❌ Don't | ✅ Do |
 |----------|-------|
