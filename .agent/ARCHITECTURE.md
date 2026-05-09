@@ -8,8 +8,8 @@
 
 Antigravity Kit is a modular system consisting of:
 
-- **20 Specialist Agents** - Role-based AI personas
-- **36 Skills** - Domain-specific knowledge modules
+- **21 Specialist Agents** - Role-based AI personas
+- **41 Skills** - Domain-specific knowledge modules
 - **11 Workflows** - Slash command procedures
 
 ---
@@ -28,7 +28,7 @@ Antigravity Kit is a modular system consisting of:
 
 ---
 
-## 🤖 Agents (20)
+## 🤖 Agents (21)
 
 Specialist AI personas for different domains.
 
@@ -36,7 +36,8 @@ Specialist AI personas for different domains.
 | ------------------------ | -------------------------- | -------------------------------------------------------- |
 | `orchestrator`           | Multi-agent coordination   | parallel-agents, behavioral-modes                        |
 | `project-planner`        | Discovery, task planning   | brainstorming, plan-writing, architecture                |
-| `frontend-specialist`    | Web UI/UX                  | frontend-design, react-best-practices, tailwind-patterns |
+| `frontend-specialist`    | Web UI/UX                  | frontend-design, nextjs-react-expert, tailwind-patterns  |
+| `api-designer`           | API contracts, OpenAPI     | api-patterns, nodejs-best-practices                      |
 | `backend-specialist`     | API, business logic        | api-patterns, nodejs-best-practices, database-design     |
 | `database-architect`     | Schema, SQL                | database-design, prisma-expert                           |
 | `mobile-developer`       | iOS, Android, RN           | mobile-design                                            |
@@ -65,7 +66,7 @@ Modular knowledge domains that agents can load on-demand. based on task context.
 
 | Skill                   | Description                                                           |
 | ----------------------- | --------------------------------------------------------------------- |
-| `react-best-practices`  | React & Next.js performance optimization (Vercel - 57 rules)          |
+| `nextjs-react-expert`  | React & Next.js performance optimization (Vercel - 57 rules)          |
 | `web-design-guidelines` | Web UI audit - 100+ rules for accessibility, UX, performance (Vercel) |
 | `tailwind-patterns`     | Tailwind CSS v4 utilities                                             |
 | `frontend-design`       | UI/UX patterns, design systems                                        |
@@ -76,8 +77,8 @@ Modular knowledge domains that agents can load on-demand. based on task context.
 | Skill                   | Description                    |
 | ----------------------- | ------------------------------ |
 | `api-patterns`          | REST, GraphQL, tRPC            |
-| `nestjs-expert`         | NestJS modules, DI, decorators |
 | `nodejs-best-practices` | Node.js async, modules         |
+| `nestjs-expert`         | NestJS modules, DI, decorators |
 | `python-patterns`       | Python standards, FastAPI      |
 
 ### Database
