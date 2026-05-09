@@ -9,7 +9,7 @@
 Antigravity Kit is a modular system consisting of:
 
 - **24 Specialist Agents** - Role-based AI personas
-- **45 Skills** - Domain-specific knowledge modules
+- **46 Skills** - Domain-specific knowledge modules
 - **11 Workflows** - Slash command procedures
 
 ---
@@ -20,7 +20,7 @@ Antigravity Kit is a modular system consisting of:
 .agent/
 ├── ARCHITECTURE.md          # This file
 ├── agents/                  # 24 Specialist Agents
-├── skills/                  # 45 Skills
+├── skills/                  # 46 Skills
 ├── workflows/               # 11 Slash Commands
 ├── rules/                   # Global Rules
 └── scripts/                 # Master Validation Scripts
@@ -134,6 +134,7 @@ Modular knowledge domains that agents can load on-demand. based on task context.
 | Skill           | Description                        |
 | --------------- | ---------------------------------- |
 | `latex_tutor`   | LaTeX textbook chapters from slides |
+| `latex_review`  | LaTeX project audit & QA            |
 
 ### IoT & Embedded
 
