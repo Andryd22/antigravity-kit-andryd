@@ -7,6 +7,53 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 2026-05-10
+
+### Added
+
+- **New Agents (5)**:
+    - `api-designer` — REST, GraphQL, OpenAPI, tRPC contract-first API design
+    - `ai-ml-engineer` — LLM integration, RAG pipelines, prompt engineering, AI app development
+    - `data-engineer` — ETL/ELT pipelines, dbt, Airflow, data warehousing
+    - `embedded-engineer` — Arduino, ESP32, STM32, FreeRTOS, IoT sensors
+    - `latex-specialist` — Academic LaTeX chapter generation and project auditing
+- **New Skills (9)**:
+    - `nestjs-expert` — NestJS modules, DI, guards, interceptors
+    - `prisma-expert` — Prisma ORM schema design, migrations, performance
+    - `typescript-expert` — Advanced type-level programming, generics, branded types
+    - `docker-expert` — Multi-stage builds, Docker Compose, security hardening
+    - `prompt-engineering` — LLM prompts, RAG architecture, embedding strategies
+    - `data-engineering` — Pipeline patterns, orchestration, data quality
+    - `embedded-systems` — MCU, RTOS, MQTT, sensors, power management
+    - `latex_tutor` — University-level LaTeX chapter generation from slides
+    - `latex_review` — Comprehensive LaTeX project audit and QA
+- **New Scripts (2)**:
+    - `dependency_analyzer.py` — npm/pip dependency vulnerability scanning
+    - `bundle_analyzer.py` — Bundle size analysis, chunk inspection, duplicate detection
+- **New File**: `.agent/tasks/lessons.md` — Pattern capture template for agent learning
+
+### Changed
+
+- **Architecture Overhaul (Phase 1)**:
+    - Consolidated agent routing into `intelligent-routing/SKILL.md` as single source of truth
+    - Trimmed `GEMINI.md` from 273 to ~148 lines, delegated routing with `always_on` rule
+    - Removed duplicate agent selection matrices from `orchestrate.md` and `orchestrator.md`
+    - Standardized all agent frontmatters to consistent format
+- **Quality Enhancement (Phase 2)**:
+    - Added concrete EXAMPLE blocks to 7 thin agents with real input/output scenarios
+    - Added domain-specific "Never Invent" anti-hallucination guards to all agents
+    - Added Review Checklist sections to agents missing them
+    - Reduced agent↔skill redundancy in 3 high-overlap pairs (devops, database, frontend)
+- **Documentation**:
+    - Updated `AGENT_FLOW.md`, `ARCHITECTURE.md`, `CHANGELOG.md`, `README.md`
+    - All counts and agent/skill tables updated
+
+### Fixed
+
+- Fixed `debugger.md` missing tools array (was empty `[]`)
+- Fixed `explorer-agent.md` invalid tool names (`ViewCodeItem`, `FindByName`)
+- Fixed `code-archaeologist.md` missing `Bash` tool
+- Fixed phantom skill references in `ARCHITECTURE.md` (`react-best-practices` → `nextjs-react-expert`)
 
 ## [2.0.2] - 2026-02-04
 - **New Skills**:

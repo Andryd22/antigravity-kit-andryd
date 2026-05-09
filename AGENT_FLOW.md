@@ -15,7 +15,7 @@
 ┌─────────────────────────────────────────────────────────────────┐
 │                    REQUEST CLASSIFICATION                        │
 │  • Analyze intent (build, debug, test, deploy, etc.)           │
-│  • Identify domain (frontend, backend, mobile, etc.)           │
+│  • Identify domain (frontend, backend, mobile, AI, IoT, etc.)  │
 │  • Detect complexity (simple, medium, complex)                  │
 └────────────────────────────┬────────────────────────────────────┘
                              │
@@ -151,11 +151,10 @@ Request Domain → Agent Mapping:
 ┌──────────────────────┬─────────────────────┬──────────────────────────┐
 │ Domain               │ Primary Agent       │ Skills Loaded            │
 ├──────────────────────┼─────────────────────┼──────────────────────────┤
-│ UI/UX Design         │ frontend-specialist │ react-best-practices      │
+│ UI/UX Design         │ frontend-specialist │ nextjs-react-expert      │
 │                      │                     │ frontend-design          │
 │                      │                     │ tailwind-patterns        │
-|                      │                     │ web-design-guidelines    │
-│                      │                     │ frontend-design          │
+│                      │                     │ web-design-guidelines    │
 ├──────────────────────┼─────────────────────┼──────────────────────────┤
 │ API Development      │ backend-specialist  │ api-patterns             │
 │                      │                     │ nodejs-best-practices    │
@@ -193,6 +192,21 @@ Request Domain → Agent Mapping:
 │ Planning/Discovery   │ project-planner     │ brainstorming            │
 │                      │                     │ plan-writing             │
 │                      │                     │ architecture             │
+├──────────────────────┼─────────────────────┼──────────────────────────┤
+│ API Design           │ api-designer        │ api-patterns             │
+│                      │                     │ nodejs-best-practices    │
+├──────────────────────┼─────────────────────┼──────────────────────────┤
+│ AI/ML & LLM          │ ai-ml-engineer      │ prompt-engineering       │
+│                      │                     │ api-patterns             │
+├──────────────────────┼─────────────────────┼──────────────────────────┤
+│ Data Engineering     │ data-engineer       │ data-engineering         │
+│                      │                     │ python-patterns          │
+├──────────────────────┼─────────────────────┼──────────────────────────┤
+│ Embedded & IoT       │ embedded-engineer   │ embedded-systems         │
+├──────────────────────┼─────────────────────┼──────────────────────────┤
+│ Academic/LaTeX       │ latex-specialist    │ latex_tutor              │
+│                      │                     │ latex_review             │
+│                      │                     │ clean-code               │
 ├──────────────────────┼─────────────────────┼──────────────────────────┤
 │ Multi-Agent Tasks    │ orchestrator        │ parallel-agents          │
 │                      │                     │ behavioral-modes         │
@@ -527,12 +541,12 @@ User Request: "Build a Next.js dashboard with authentication"
 ┌──────────────────────────────────────────────────────────┐
 │                    SYSTEM CAPABILITIES                    │
 ├──────────────────────────────────────────────────────────┤
-│ Total Agents:              20                            │
-│ Total Skills:              36                            │
+│ Total Agents:              25                            │
+│ Total Skills:              46                            │
 │ Total Workflows:           11                            │
 │ Master Scripts:            2 (checklist, verify_all)     │
-│ Skill-Level Scripts:       18                            │
-│ Coverage:                  ~90% web/mobile development   │
+│ Skill-Level Scripts:       20                            │
+│ Coverage:                  Web, Mobile, AI/ML, Data, IoT │
 │                                                          │
 │ Supported Frameworks:                                    │
 │ ├─ Frontend: React, Next.js, Vue, Nuxt, Astro          │
@@ -599,5 +613,5 @@ User Request: "Build a Next.js dashboard with authentication"
 
 ---
 
-**Last Updated**: 2026-01-26
+**Last Updated**: 2026-05-10
 **Version**: 2.0.1
