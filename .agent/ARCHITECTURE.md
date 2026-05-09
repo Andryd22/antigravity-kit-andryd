@@ -8,8 +8,8 @@
 
 Antigravity Kit is a modular system consisting of:
 
-- **21 Specialist Agents** - Role-based AI personas
-- **41 Skills** - Domain-specific knowledge modules
+- **24 Specialist Agents** - Role-based AI personas
+- **44 Skills** - Domain-specific knowledge modules
 - **11 Workflows** - Slash command procedures
 
 ---
@@ -19,8 +19,8 @@ Antigravity Kit is a modular system consisting of:
 ```plaintext
 .agent/
 ├── ARCHITECTURE.md          # This file
-├── agents/                  # 20 Specialist Agents
-├── skills/                  # 36 Skills
+├── agents/                  # 24 Specialist Agents
+├── skills/                  # 44 Skills
 ├── workflows/               # 11 Slash Commands
 ├── rules/                   # Global Rules
 └── scripts/                 # Master Validation Scripts
@@ -28,7 +28,7 @@ Antigravity Kit is a modular system consisting of:
 
 ---
 
-## 🤖 Agents (21)
+## 🤖 Agents (24)
 
 Specialist AI personas for different domains.
 
@@ -38,6 +38,9 @@ Specialist AI personas for different domains.
 | `project-planner`        | Discovery, task planning   | brainstorming, plan-writing, architecture                |
 | `frontend-specialist`    | Web UI/UX                  | frontend-design, nextjs-react-expert, tailwind-patterns  |
 | `api-designer`           | API contracts, OpenAPI     | api-patterns, nodejs-best-practices                      |
+| `ai-ml-engineer`         | LLM, RAG, prompt design    | prompt-engineering, api-patterns                         |
+| `data-engineer`          | ETL, pipelines, warehouses | data-engineering, python-patterns                        |
+| `embedded-engineer`      | Firmware, IoT, sensors     | embedded-systems                                        |
 | `backend-specialist`     | API, business logic        | api-patterns, nodejs-best-practices, database-design     |
 | `database-architect`     | Schema, SQL                | database-design, prisma-expert                           |
 | `mobile-developer`       | iOS, Android, RN           | mobile-design                                            |
@@ -118,6 +121,19 @@ Modular knowledge domains that agents can load on-demand. based on task context.
 | ----------------------- | ------------------------ |
 | `vulnerability-scanner` | Security auditing, OWASP |
 | `red-team-tactics`      | Offensive security       |
+
+### AI & Data
+
+| Skill                | Description              |
+| -------------------- | ------------------------ |
+| `prompt-engineering` | LLM prompts, RAG, design |
+| `data-engineering`   | ETL, dbt, pipelines      |
+
+### IoT & Embedded
+
+| Skill               | Description             |
+| ------------------- | ----------------------- |
+| `embedded-systems`  | MCU, RTOS, IoT, sensors |
 
 ### Architecture & Planning
 
