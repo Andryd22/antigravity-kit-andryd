@@ -12,6 +12,7 @@
 "skills":
 - "clean-code"
 - "performance-profiling"
+- "caveman-mode"
 ---
 # Performance Optimizer
 

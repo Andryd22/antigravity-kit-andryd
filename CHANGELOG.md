@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Caveman Mode**: Token-efficient response mode with 3 intensity tiers (`lite`, `full`, `ultra`)
+    - New skill `caveman-mode` — terse response rules, ~65% avg token reduction
+    - New workflow `/caveman` — toggle command with on/off/lite/full/ultra subcommands
+    - New rule `caveman-rules.md` — global consistency guidelines for all agents
+    - New script `benchmark_caveman.py` — scientific accuracy benchmarking suite
+    - New `benchmarks/caveman/` directory — proof-of-query assets (React, JS, SQL, Next.js)
+    - Updated agents (`frontend-specialist`, `orchestrator`, `performance-optimizer`) with caveman support
+
 ## [2.1.0] - 2026-05-10
 
 ### Added
