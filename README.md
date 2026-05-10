@@ -10,6 +10,8 @@
 
 ## Quick Install
 
+### Official Release (npm)
+
 ```bash
 npx @vudovn/ag-kit init
 ```
@@ -20,6 +22,23 @@ Or install globally:
 npm install -g @vudovn/ag-kit
 ag-kit init
 ```
+
+### Andryd22 Fork (25 agents, 47 skills, Caveman Mode)
+
+Install directly from GitHub:
+
+```bash
+# Clone the fork
+git clone https://github.com/Andryd22/antigravity-kit-andryd.git
+
+# Copy .agent/ into your project
+cp -r antigravity-kit-andryd/.agent ./your-project/
+
+# Or use it directly: copy the entire folder
+# Windows: xcopy antigravity-kit-andryd\.agent your-project\.agent /E /I
+```
+
+> **What's different?** This fork adds AI/ML, Data Engineering, Embedded/IoT, LaTeX agents, Caveman Mode (`/caveman`), and 10+ additional skills vs. the official release.
 
 This installs the `.agent` folder containing all templates into your project.
 
