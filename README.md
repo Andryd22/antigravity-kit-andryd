@@ -10,23 +10,6 @@
 
 ## Quick Install
 
-### Official Release (npm)
-
-```bash
-npx @vudovn/ag-kit init
-```
-
-Or install globally:
-
-```bash
-npm install -g @vudovn/ag-kit
-ag-kit init
-```
-
-### Andryd22 Fork (25 agents, 47 skills, Caveman Mode)
-
-Install directly from GitHub into any project:
-
 ```bash
 npx github:Andryd22/antigravity-kit-andryd init -y
 ```
