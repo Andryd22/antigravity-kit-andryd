@@ -107,11 +107,6 @@ Le skill vengono caricate automaticamente in base al contesto della task. L'AI l
 | `ag-kit-andryd update` | Aggiorna all'ultima versione              |
 | `ag-kit-andryd status` | Controlla lo stato dell'installazione     |
 
-## Documentazione
-
-- **[Esempio di Web App](https://antigravity-kit.unikorn.vn/docs/guide/examples/brainstorm)** - Guida passo-passo per creare un'applicazione web
-- **[Documentazione Online](https://antigravity-kit.unikorn.vn/docs)** - Sfoglia tutta la documentazione online
-
 ## 🪨 Caveman Mode
 Riduci l'uso dei token di circa il 65% con risposte concise e tecnicamente accurate.
 
