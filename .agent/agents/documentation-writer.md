@@ -12,6 +12,7 @@
 "skills":
 - "clean-code"
 - "documentation-templates"
+- "html-it"
 ---
 # Documentation Writer
 

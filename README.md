@@ -1,6 +1,6 @@
 # Antigravity Kit
 
-> AI Agent templates with Skills, Agents, and Workflows
+> Template per agenti AI con Skill, Agenti e Workflow
 
 <div  align="center">
     <a href="https://unikorn.vn/p/antigravity-kit?ref=unikorn" target="_blank"><img src="https://unikorn.vn/api/widgets/badge/antigravity-kit?theme=dark" alt="Antigravity Kit - Nổi bật trên Unikorn.vn" style="width: 210px; height: 54px;" width="210" height="54" /></a>
@@ -8,96 +8,96 @@
     <a href="https://launch.j2team.dev/products/antigravity-kit" target="_blank"><img src="https://launch.j2team.dev/badge/antigravity-kit/dark" alt="Antigravity Kit on J2TEAM Launch" width="250" height="54" /></a>
 </div>
 
-## Quick Install
+## Installazione Rapida
 
 ```bash
 npx github:Andryd22/antigravity-kit-andryd init -y
 ```
 
-With options:
+Opzioni disponibili:
 
 ```bash
-npx github:Andryd22/antigravity-kit-andryd init -y --force   # Overwrite existing .agent/
-npx github:Andryd22/antigravity-kit-andryd init -y --dry-run # Preview without writing
-npx github:Andryd22/antigravity-kit-andryd init -y --path ./myapp  # Target directory
-npx github:Andryd22/antigravity-kit-andryd status         # Show what's included
+npx github:Andryd22/antigravity-kit-andryd init -y --force   # Sovrascrive la cartella .agent/ esistente
+npx github:Andryd22/antigravity-kit-andryd init -y --dry-run # Mostra un'anteprima senza scrivere file
+npx github:Andryd22/antigravity-kit-andryd init -y --path ./myapp  # Directory di destinazione
+npx github:Andryd22/antigravity-kit-andryd status         # Mostra i componenti inclusi
 ```
 
-> **What's different?** This fork adds AI/ML, Data Engineering, Embedded/IoT, LaTeX agents, Caveman Mode (`/caveman`), and 10+ additional skills vs. the official release.
+> **Cosa c'è di diverso?** Questo fork aggiunge agenti per AI/ML, Data Engineering, Embedded/IoT, LaTeX, la Caveman Mode (`/caveman`) e oltre 10 skill aggiuntive rispetto alla versione ufficiale.
 
-This installs the `.agent` folder containing all templates into your project.
+Questo comando installa la cartella `.agent` contenente tutti i template all'interno del tuo progetto.
 
-### ⚠️ Important Note on `.gitignore`
-If you are using AI-powered editors like **Cursor** or **Windsurf**, adding the `.agent/` folder to your `.gitignore` may prevent the IDE from indexing the workflows. This results in slash commands (like `/plan`, `/debug`) not appearing in the chat suggestion dropdown.
+### ⚠️ Nota Importante su `.gitignore`
+Se stai usando editor basati sull'AI come **Cursor** o **Windsurf**, aggiungere la cartella `.agent/` al tuo file `.gitignore` potrebbe impedire all'IDE di indicizzare i workflow. Questo fa sì che gli slash command (come `/plan`, `/debug`) non compaiano nel menu a tendina della chat.
 
-**Recommended Solution:**
-To keep the `.agent/` folder local (not tracked by Git) while maintaining AI functionality:
-1. Ensure `.agent/` is **NOT** in your project's `.gitignore`.
-2. Instead, add it to your local exclude file: `.git/info/exclude`
+**Soluzione Consigliata:**
+Per mantenere la cartella `.agent/` locale (non tracciata da Git) senza perdere le funzionalità AI:
+1. Assicurati che `.agent/` **NON** sia nel file `.gitignore` del tuo progetto.
+2. Aggiungilo invece al tuo file di esclusione locale: `.git/info/exclude`
 
-## What's Included
+## Cosa è Incluso
 
-| Component     | Count | Description                                                        |
-| ------------- | ----- | ------------------------------------------------------------------ |
-| **Agents**    | 25    | Specialist AI personas (frontend, backend, AI/ML, IoT, LaTeX, etc.) |
-| **Skills**    | 47    | Domain-specific knowledge modules                                  |
-| **Workflows** | 11    | Slash command procedures                                           |
-| **Modern ES** | 2026+ | **Next.js 16 & React 19 Native** (Cache Components, PPR, Proxy)    |
+| Componente    | Quantità | Descrizione                                                        |
+| ------------- | -------- | ------------------------------------------------------------------ |
+| **Agenti**    | 25       | Personas AI specializzate (frontend, backend, AI/ML, IoT, LaTeX, ecc.) |
+| **Skill**     | 48       | Moduli di conoscenza specifici per dominio                         |
+| **Workflow**  | 13       | Procedure attivabili tramite slash command                         |
+| **Modern ES** | 2026+    | **Next.js 16 & React 19 Native** (Cache Components, PPR, Proxy)    |
 
 
-## Usage
+## Utilizzo
 
-### Using Agents
+### Usare gli Agenti
 
-**No need to mention agents explicitly!** The system automatically detects and applies the right specialist(s):
+**Non c'è bisogno di menzionare esplicitamente gli agenti!** Il sistema rileva automaticamente e applica lo specialista (o gli specialisti) giusto:
 
 ```
-You: "Add JWT authentication"
-AI: 🤖 Applying @security-auditor + @backend-specialist...
+Tu: "Aggiungi l'autenticazione JWT"
+AI: 🤖 Applico @security-auditor + @backend-specialist...
 
-You: "Fix the dark mode button"
-AI: 🤖 Using @frontend-specialist...
+Tu: "Correggi il pulsante della dark mode"
+AI: 🤖 Uso @frontend-specialist...
 
-You: "Login returns 500 error"
-AI: 🤖 Using @debugger for systematic analysis...
+Tu: "Il login restituisce un errore 500"
+AI: 🤖 Uso @debugger per un'analisi sistematica...
 ```
 
-**How it works:**
+**Come funziona:**
 
-- Analyzes your request silently
+- Analizza silenziosamente la tua richiesta
+- Rileva automaticamente i domini di competenza (frontend, backend, sicurezza, ecc.)
+- Seleziona i migliori specialisti
+- Ti informa su quale competenza sta venendo applicata
+- Ottieni risposte a livello di specialista senza dover conoscere l'architettura del sistema
 
-- Detects domain(s) automatically (frontend, backend, security, etc.)
-- Selects the best specialist(s)
-- Informs you which expertise is being applied
-- You get specialist-level responses without needing to know the system architecture
+**Vantaggi:**
 
-**Benefits:**
+- ✅ Nessuna curva di apprendimento: descrivi solo ciò di cui hai bisogno
+- ✅ Ottieni sempre risposte da esperti
+- ✅ Trasparenza: mostra quale agente viene utilizzato
+- ✅ Puoi sempre forzare l'uso di un agente menzionandolo esplicitamente
 
-- ✅ Zero learning curve - just describe what you need
-- ✅ Always get expert responses
-- ✅ Transparent - shows which agent is being used
-- ✅ Can still override by mentioning agent explicitly
+### Usare i Workflow
 
-### Using Workflows
+Richiama i workflow tramite gli slash command:
 
-Invoke workflows with slash commands:
-
-| Command          | Description                           |
+| Comando          | Descrizione                           |
 | ---------------- | ------------------------------------- |
-| `/brainstorm`    | Explore options before implementation |
-| `/create`        | Create new features or apps           |
-| `/debug`         | Systematic debugging                  |
-| `/deploy`        | Deploy application                    |
-| `/enhance`       | Improve existing code                 |
-| `/orchestrate`   | Multi-agent coordination              |
-| `/plan`          | Create task breakdown                 |
-| `/preview`       | Preview changes locally               |
-| `/status`        | Check project status                  |
-| `/test`          | Generate and run tests                |
-| `/ui-ux-pro-max` | Design with 50 styles                 |
-| `/caveman`       | Toggle token-efficient response mode  |
+| `/brainstorm`    | Esplora le opzioni prima dell'implementazione |
+| `/create`        | Crea nuove funzionalità o applicazioni |
+| `/debug`         | Debugging sistematico                  |
+| `/deploy`        | Esegue il deploy dell'applicazione     |
+| `/enhance`       | Migliora il codice esistente           |
+| `/orchestrate`   | Coordinazione multi-agente             |
+| `/plan`          | Crea un piano dettagliato per le task  |
+| `/preview`       | Visualizza un'anteprima delle modifiche in locale |
+| `/status`        | Controlla lo stato del progetto        |
+| `/test`          | Genera ed esegue i test                |
+| `/ui-ux-pro-max` | Progetta interfacce con 50 stili       |
+| `/caveman`       | Attiva la modalità di risposta per risparmiare token |
+| `/html-it`       | Framework per output HTML di alta qualità |
 
-Example:
+Esempio:
 
 ```
 /brainstorm authentication system
@@ -105,59 +105,59 @@ Example:
 /debug why login fails
 ```
 
-### Using Skills
+### Usare le Skill
 
-Skills are loaded automatically based on task context. The AI reads skill descriptions and applies relevant knowledge.
+Le skill vengono caricate automaticamente in base al contesto della task. L'AI legge le descrizioni delle skill e applica le conoscenze pertinenti.
 
-## CLI Tool
+## Strumento CLI
 
-| Command         | Description                               |
+| Comando         | Descrizione                               |
 | --------------- | ----------------------------------------- |
-| `ag-kit init`   | Install `.agent` folder into your project |
-| `ag-kit update` | Update to the latest version              |
-| `ag-kit status` | Check installation status                 |
+| `ag-kit init`   | Installa la cartella `.agent` nel tuo progetto |
+| `ag-kit update` | Aggiorna all'ultima versione              |
+| `ag-kit status` | Controlla lo stato dell'installazione     |
 
-### Options
+### Opzioni
 
 ```bash
-ag-kit init --force        # Overwrite existing .agent folder
-ag-kit init --path ./myapp # Install in specific directory
-ag-kit init --branch dev   # Use specific branch
-ag-kit init --quiet        # Suppress output (for CI/CD)
-ag-kit init --dry-run      # Preview actions without executing
+ag-kit init --force        # Sovrascrive la cartella .agent esistente
+ag-kit init --path ./myapp # Installa in una directory specifica
+ag-kit init --branch dev   # Usa un branch specifico
+ag-kit init --quiet        # Sopprime l'output (per CI/CD)
+ag-kit init --dry-run      # Mostra un'anteprima senza eseguire modifiche
 ```
 
-## Documentation
+## Documentazione
 
-- **[Web App Example](https://antigravity-kit.unikorn.vn/docs/guide/examples/brainstorm)** - Step-by-step guide to creating a web application
-- **[Online Docs](https://antigravity-kit.unikorn.vn/docs)** - Browse all documentation online
+- **[Esempio di Web App](https://antigravity-kit.unikorn.vn/docs/guide/examples/brainstorm)** - Guida passo-passo per creare un'applicazione web
+- **[Documentazione Online](https://antigravity-kit.unikorn.vn/docs)** - Sfoglia tutta la documentazione online
 
 ## 🪨 Caveman Mode
-Reduce token usage by ~65% with terse, technically accurate responses.
+Riduci l'uso dei token di circa il 65% con risposte concise e tecnicamente accurate.
 
-### Usage:
-- Enable: `/caveman on`
-- Disable: `/caveman off`
-- Intensity Levels:
+### Utilizzo:
+- Abilita: `/caveman on`
+- Disabilita: `/caveman off`
+- Livelli di intensità:
   - Lite: `/caveman lite`
-  - Full (default): `/caveman full`
+  - Full (predefinito): `/caveman full`
   - Ultra: `/caveman ultra`
 
-### Example:
+### Esempio:
 ```
-User: /caveman on
-AI: Caveman mode enabled.
+Utente: /caveman on
+AI: Modalità Caveman abilitata.
 
-User: Explain React hooks.
-AI: Hooks let functional components use state, lifecycle. useState, useEffect, useContext. No classes needed.
+Utente: Spiega i React hooks.
+AI: Gli hooks permettono ai componenti funzionali di usare stato e ciclo di vita. useState, useEffect, useContext. Nessuna classe necessaria.
 ```
 
-### Benchmarks:
-- Token Reduction: 60-75%
-- Accuracy: 100% retained
-- Performance: No impact on speed
+### Benchmark:
+- Riduzione dei token: 60-75%
+- Precisione: 100% mantenuta
+- Prestazioni: Nessun impatto sulla velocità
 
-## Buy me coffee
+## Offrimi un caffè
 
 <p align="center">
   <a href="https://buymeacoffee.com/vudovn">
@@ -165,12 +165,12 @@ AI: Hooks let functional components use state, lifecycle. useState, useEffect, u
   </a>
 </p>
 
-<p align="center"> - or - </p>
+<p align="center"> - oppure - </p>
 
 <p align="center">
-  <img src="https://img.vietqr.io/image/mbbank-0779440918-compact.jpg" alt="Buy me coffee" width="200" />
+  <img src="https://img.vietqr.io/image/mbbank-0779440918-compact.jpg" alt="Offrimi un caffè" width="200" />
 </p>
 
-## License
+## Licenza
 
 MIT © Vudovn

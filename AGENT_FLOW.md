@@ -40,6 +40,7 @@
     │ /status           │      │ • test-*         │
     │ /test             │      │ • security-*     │
     │ /ui-ux-pro-max    │      │ • game-*         │
+    │ /html-it          │      │                  │
     └─────────┬─────────┘      └────────┬─────────┘
               │                         │
               └────────────┬────────────┘
@@ -187,7 +188,7 @@ Request Domain → Agent Mapping:
 │                      │                     │ geo-fundamentals         │
 ├──────────────────────┼─────────────────────┼──────────────────────────┤
 │ Documentation        │ documentation-      │ documentation-templates  │
-│                      │ writer              │                          │
+│                      │ writer              │ html-it                  │
 ├──────────────────────┼─────────────────────┼──────────────────────────┤
 │ Planning/Discovery   │ project-planner     │ brainstorming            │
 │                      │                     │ plan-writing             │
@@ -332,6 +333,13 @@ Slash Command Flow:
     3. Access: 21 color palettes
     4. Access: 50 font combinations
     5. Generate: Professional UI with selected style
+
+/html-it
+    ↓
+    1. Detect: Content length and type
+    2. Load: html-it skill
+    3. Select: HTML Output Level (1-4)
+    4. Generate: Standalone HTML artifact
 ```
 
 ### 5️⃣ **Multi-Agent Orchestration**
@@ -542,10 +550,10 @@ User Request: "Build a Next.js dashboard with authentication"
 │                    SYSTEM CAPABILITIES                    │
 ├──────────────────────────────────────────────────────────┤
 │ Total Agents:              25                            │
-│ Total Skills:              46                            │
-│ Total Workflows:           11                            │
+│ Total Skills:              48                            │
+│ Total Workflows:           13                            │
 │ Master Scripts:            2 (checklist, verify_all)     │
-│ Skill-Level Scripts:       20                            │
+│ Skill-Level Scripts:       19                            │
 │ Coverage:                  Web, Mobile, AI/ML, Data, IoT │
 │                                                          │
 │ Supported Frameworks:                                    │

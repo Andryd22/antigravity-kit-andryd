@@ -13,6 +13,7 @@
 - "latex_tutor"
 - "latex_review"
 - "clean-code"
+- "html-it"
 ---
 
 # LaTeX Specialist — Academic Assistant

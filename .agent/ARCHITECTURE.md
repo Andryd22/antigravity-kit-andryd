@@ -62,7 +62,7 @@ Specialist AI personas for different domains.
 
 ---
 
-## 🧩 Skills (47)
+## 🧩 Skills (48)
 
 Modular knowledge domains that agents can load on-demand. based on task context.
 
@@ -182,6 +182,7 @@ Modular knowledge domains that agents can load on-demand. based on task context.
 
 | Skill                     | Description               |
 | ------------------------- | ------------------------- |
+| `html-it`                 | HTML output framework     |
 | `clean-code`              | Coding standards (Global) |
 | `behavioral-modes`        | Agent personas            |
 | `parallel-agents`         | Multi-agent patterns      |
@@ -194,7 +195,7 @@ Modular knowledge domains that agents can load on-demand. based on task context.
 
 ---
 
-## 🔄 Workflows (11)
+## 🔄 Workflows (13)
 
 Slash command procedures. Invoke with `/command`.
 
@@ -211,6 +212,7 @@ Slash command procedures. Invoke with `/command`.
 | `/status`        | Check project status     |
 | `/test`          | Run tests                |
 | `/ui-ux-pro-max` | Design with 50 styles    |
+| `/html-it`       | HTML output framework    |
 | `/caveman`       | Toggle Caveman Mode      |
 
 ---
@@ -244,7 +246,7 @@ skill-name/
 
 ---
 
-## � Scripts (2)
+## 📊 Scripts (2)
 
 Master validation scripts that orchestrate skill-level scripts.
 
@@ -294,8 +296,8 @@ For details, see [scripts/README.md](scripts/README.md)
 | Metric              | Value                         |
 | ------------------- | ----------------------------- |
 | **Total Agents**    | 25                            |
-| **Total Skills**    | 47                            |
-| **Total Workflows** | 12                            |
+| **Total Skills**    | 48                            |
+| **Total Workflows** | 13                            |
 | **Total Scripts**   | 2 (master) + 19 (skill-level) |
 | **Coverage**        | ~90% web/mobile development   |
 
