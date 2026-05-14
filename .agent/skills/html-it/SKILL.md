@@ -489,12 +489,13 @@ Righe numerate automaticamente via CSS counter — nessun JS.
 Token classes algorithm: `.algo-kw` (clay-d, grassetto), `.algo-fn` (slate), `.algo-cm` (g500 italic), `.algo-ind` (1.5em indent).
 
 ### Rules specific to university notes
-- **Default layout: A4 fixed** — non responsive/fluid
-- **Math: MathJax sempre** — mai plain text per equazioni
-- **`<h2>` con id sempre** — obbligatorio per TOC automatico
-- **Almeno un SVG per concetto visivo principale**
-- **Flashcard in fondo** — sezione `id="recap"` fissa
-- **Un file content.html per lezione** — mai accorpare argomenti
+- **Language: English only** — all text content (titles, body, labels, callouts, flashcards, code comments) must be written in English. Exceptions: proper nouns, math notation, code syntax.
+- **Default layout: A4 fixed** — not responsive/fluid
+- **Math: MathJax always** — never plain text for equations
+- **`<h2>` with id always** — required for automatic TOC generation
+- **At least one SVG per main visual concept**
+- **Flashcards at the bottom** — fixed `id="recap"` section
+- **One content.html file per lecture** — never merge topics
 
 ---
 
@@ -543,3 +544,4 @@ Without the export button, an interactive HTML is a toy. With it, the user's man
 6. **SVG diagrams** preferred over descriptions for visual concepts
 7. **Don't summarise away the substance** — preserve actual content
 8. **Match level to task** — don't add sliders to a status report
+9. **English only** — all content (section titles, body text, labels, callouts, flashcards, code comments) must be in English. Exceptions: proper nouns, math notation, code syntax.

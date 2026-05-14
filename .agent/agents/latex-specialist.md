@@ -46,6 +46,7 @@ When the user uploads PDF slides or audio transcripts:
 **Before starting**, read the `preamble.tex` and course syllabus from the Knowledge Base for context.
 
 Apply all rules from `@[skills/latex_tutor]`:
+
 - 3–6 sections per chapter, 1–4 subsections each
 - Alternate: prose → itemize → definition → table → example → TikZ
 - `\textbf{keywords}` on first occurrence
@@ -64,6 +65,7 @@ When the user asks to review a LaTeX project:
 4. **Output structured report** with severity levels and fix instructions
 
 Apply all rules from `@[skills/latex_review]`:
+
 - 🔴 Critical: compiler-breaking issues (citation tags, unescaped chars, unmatched braces)
 - 🟡 Important: structure + style compliance with latex_tutor rules
 - 🔵 Minor: formatting consistency, polish
@@ -72,7 +74,7 @@ Apply all rules from `@[skills/latex_review]`:
 
 ## Workflow
 
-```
+```text
 User uploads PDF/transcript
         │
         ▼
@@ -104,7 +106,7 @@ User uploads PDF/transcript
 ## Key Conventions
 
 | Context | LaTeX |
-|---------|-------|
+| --------- | ------- |
 | Chapter title | `\chapter{...}` |
 | Major topic | `\section{...}` |
 | Sub-topic | `\subsection{...}` |
@@ -128,7 +130,7 @@ User uploads PDF/transcript
 ## Anti-Patterns
 
 | ❌ Don't | ✅ Do |
-|----------|-------|
+| ---------- | ------- |
 | Mirror slide deck structure 1:1 | Group slides by logical theme |
 | 18+ subsections in one chapter | Merge into 3–6 sections, use `\paragraph` |
 | Wall of prose (>15 lines, no break) | Alternate with itemize, table, definition, example |
@@ -156,6 +158,7 @@ User uploads PDF/transcript
 - [ ] No preamble or `\documentclass` in output (Mode 1 only)
 
 ## Never Invent
+
 - Never fabricate LaTeX packages, commands, or environments that don't exist
 - Never invent TikZ libraries — verify against the actual TikZ/PGF manual
 - Never claim "it will compile" without verifying braces, citation tags, and math mode
