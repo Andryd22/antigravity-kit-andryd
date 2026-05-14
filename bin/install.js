@@ -8,13 +8,14 @@ const command = args[0];
 if (!command || command === 'help' || command === '--help') {
   console.log(`
   Antigravity Kit (Andryd22 fork) — v2.1.0
-  25 agents | 47 skills | 12 workflows | Caveman Mode
+  25 agents | 48 skills | 13 workflows | Caveman Mode
 
   Usage:
     npx github:Andryd22/antigravity-kit-andryd init [options]
 
   Commands:
     init       Install .agent/ folder into current project
+    update     Update to the latest version (overwrites .agent/)
     status     Show what would be installed
     help       Show this help
 
@@ -30,19 +31,19 @@ if (!command || command === 'help' || command === '--help') {
 if (command === 'status') {
   console.log('Antigravity Kit (Andryd22 fork) v2.1.0');
   console.log('  Agents:    25 (incl. AI/ML, IoT, LaTeX, API designer)');
-  console.log('  Skills:    47 (incl. caveman-mode, prompt-engineering, embedded-systems)');
-  console.log('  Workflows: 12 (incl. /caveman)');
+  console.log('  Skills:    48 (incl. caveman-mode, prompt-engineering, embedded-systems, html-it)');
+  console.log('  Workflows: 13 (incl. /caveman, /html-it)');
   console.log('  Features:  Caveman Mode, Next.js 16 support, academic LaTeX');
   process.exit(0);
 }
 
-if (command !== 'init') {
+if (command !== 'init' && command !== 'update') {
   console.error(`Unknown command: ${command}`);
-  console.error('Usage: npx github:Andryd22/antigravity-kit-andryd init');
+  console.error('Usage: ag-kit-andryd init');
   process.exit(1);
 }
 
-const force = args.includes('--force');
+let force = args.includes('--force') || command === 'update';
 const dryRun = args.includes('--dry-run');
 const quiet = args.includes('--quiet');
 
@@ -91,7 +92,7 @@ if (dryRun) {
   }
   countFiles(sourceDir);
   console.log(`[DRY RUN] Would install ${count} files to ${destDir}`);
-  console.log('  25 agents, 47 skills, 12 workflows');
+  console.log('  25 agents, 48 skills, 13 workflows');
   console.log('  Includes: Caveman Mode, AI/ML, IoT, LaTeX, Data Engineering');
 } else {
   if (force && fs.existsSync(destDir)) {
@@ -112,7 +113,7 @@ if (dryRun) {
 
   if (!quiet) {
     console.log(`Installed .agent/ to ${targetDir}`);
-    console.log(`  ${count} files — 25 agents, 47 skills, 12 workflows`);
+    console.log(`  ${count} files — 25 agents, 48 skills, 13 workflows`);
     console.log(`  Try /caveman on in your IDE to enable Caveman Mode`);
   }
 }
